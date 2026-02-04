@@ -3,150 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <title>Your Name - Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa; /* Light blue background */
-            color: #01579b; /* Dark blue text for contrast */
-            line-height: 1.6;
+            background-color: #000; /* Black background like MU kit */
+            color: #fff;
+            background-image: radial-gradient(circle, #DA010E 1px, transparent 1px); /* Subtle football field dots */
+            background-size: 20px 20px;
         }
         header {
-            background-color: #0277bd; /* Medium blue header */
-            color: #fff;
-            padding: 1rem 0;
+            background-color: #DA010E; /* Manchester United red */
             text-align: center;
+            padding: 50px 20px;
+            position: relative;
         }
-        nav {
-            margin-top: 1rem;
+        header h1 {
+            font-size: 4em; /* Big name in the middle */
+            margin: 0;
+            text-shadow: 2px 2px 4px #000;
         }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            color: #b3e5fc; /* Lighter blue on hover */
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
         }
         section {
-            padding: 2rem;
-            max-width: 800px;
+            padding: 40px 20px;
+            max-width: 1200px;
             margin: 0 auto;
-            background-color: #ffffff; /* White sections for readability */
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        h1, h2 {
-            color: #0277bd; /* Blue headings */
+        .about, .portfolio, .contact {
+            margin-bottom: 40px;
         }
-        .about, .skills, .projects, .contact {
-            margin-bottom: 2rem;
+        h2 {
+            color: #DA010E;
+            border-bottom: 2px solid #DA010E;
+            padding-bottom: 10px;
         }
-        .skills ul {
-            list-style-type: none;
-            padding: 0;
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .skills li {
-            background-color: #b3e5fc; /* Light blue skill items */
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border-radius: 5px;
-            color: #01579b;
+        .portfolio-item {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
         }
-        .projects .project {
-            background-color: #f1f8e9; /* Very light blue-green for projects */
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .contact form {
+        .contact-info {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
-        .contact input, .contact textarea {
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border: 1px solid #0277bd; /* Blue border */
-            border-radius: 5px;
-        }
-        .contact button {
-            padding: 0.5rem;
-            background-color: #0277bd; /* Blue button */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact button:hover {
-            background-color: #01579b; /* Darker blue on hover */
+        .contact-info a {
+            color: #DA010E;
+            text-decoration: none;
+            margin: 10px 0;
         }
         footer {
-            background-color: #0277bd; /* Blue footer */
-            color: #fff;
             text-align: center;
-            padding: 1rem 0;
+            padding: 20px;
+            background-color: #DA010E;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>John Doe</h1>
-        <p>Web Developer & Designer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>Your Name</h1>
+        <p>Portfolio | Manchester United Fan & Professional</p>
     </header>
 
-    <section id="about" class="about">
+    <section class="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Sandeep Paudel, a passionate web developer with over 5 years of experience in creating user-friendly websites. I specialize in front-end technologies like HTML, CSS, and JavaScript, and I'm always eager to learn new tools.</p>
+        <p>I'm a passionate professional with a love for Manchester United. Describe your skills, experience, and why you're a Red Devil at heart. For example: "As a web developer, I bring creativity and precision to every project, just like United's midfield maestros."</p>
     </section>
 
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Responsive Design</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>A responsive personal portfolio built with HTML and CSS. Features include navigation, sections for skills and projects, and a contact form.</p>
-            <a href="#">View Project</a>
-        </div>
-        <div class="project">
-            <h3>E-commerce App</h3>
-            <p>An online shopping platform using React and Node.js. Includes user authentication, product listings, and payment integration.</p>
-            <a href="#">View Project</a>
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>Project 1</h3>
+                <p>Description of your work, e.g., a web app inspired by football stats.</p>
+                <a href="#" style="color: #DA010E;">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project 2</h3>
+                <p>Another project, perhaps a design for a sports blog.</p>
+                <a href="#" style="color: #DA010E;">View Project</a>
+            </div>
+            <!-- Add more items as needed -->
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section class="contact">
         <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+            <!-- Add more contact methods like GitHub or Twitter -->
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Sandeep Paudel. All rights reserved.</p>
+        <p>&copy; 2023 Your Name. Glory Glory Man United!</p>
     </footer>
 </body>
 </html>
